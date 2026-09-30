@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="469.27" height="53.16" viewBox="0 0 469.27 53.16">
+<rect id="cta-bar" width="469.27" height="53.16" rx="26.58" fill="#1D3A31"/>
+<text id="label" x="22.39" y="31.9" font-family="Geist" font-size="14.72" font-weight="600" fill="#FAF7F1">Free 30-min intro call</text>
+<text id="sublabel" x="178.00" y="31.9" font-family="Geist" font-size="14.72" font-weight="400" fill="#FAF7F1" fill-opacity="0.65">· No pitch, no pressure</text>
+<rect id="button" x="350.38" y="7.19" width="111.70" height="38.78" rx="19.39" fill="#C4633A"/>
+<text id="button-label" x="369.35" y="31.7" font-family="Geist" font-size="14.4" font-weight="500" fill="#FFFFFF">Book a call</text>
+</svg>
