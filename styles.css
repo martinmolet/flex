@@ -405,7 +405,7 @@ body::after { /* paper grain across the whole page */
 .pillars { background: var(--paper); }
 .pillars .pillar:not(.pillar--dark) { background: var(--cream); }
 .pillars__grid { display: grid; grid-template-columns: 1fr 1.15fr; gap: 1.25rem; }
-.pillars__grid .pillar--dark { grid-column: 2; grid-row: 1 / span 2; }
+.pillars__grid .pillar--dark { grid-column: 2; grid-row: 1 / span 2; justify-content: flex-end; }
 .pillar {
   --pad: clamp(1.75rem, 1.25rem + 1.5vw, 2.5rem);
   background: var(--paper); border-radius: var(--radius); overflow: hidden;
@@ -523,6 +523,8 @@ body::after { /* paper grain across the whole page */
 .founders__photo figcaption strong { font-family: var(--font-serif); font-weight: 400; font-size: 1.35rem; }
 .founders__photo figcaption p:last-child { color: var(--ink-soft); font-size: .92rem; align-self: end; }
 .founders__quote { margin: 0; padding: clamp(1.75rem, 1rem + 2vw, 2.75rem); background: var(--cream); border-radius: var(--radius); display: flex; flex-direction: column; justify-content: space-between; gap: 2rem; }
+/* same height as the photo: 579/401 photo in a 1.35fr column next to this 1fr one */
+.founders__quote { align-self: start; aspect-ratio: 579 / 541.35; }
 .founders__quote p { font-family: var(--font-serif); font-size: clamp(1.5rem, 1.1rem + 1.2vw, 2.2rem); line-height: 1.2; letter-spacing: -.01em; }
 .founders__quote p::before { content: "“"; display: block; font-size: 4rem; line-height: .6; color: var(--clay); margin-bottom: .5rem; }
 .founders__quote p { text-indent: 0; }
@@ -905,6 +907,7 @@ body::after { /* paper grain across the whole page */
   .stats li { padding-bottom: 1.5rem; }
   .stats li:nth-child(n+3) { border-top: 1px solid var(--line); }
   .founders__grid { grid-template-columns: 1fr; }
+  .founders__quote { aspect-ratio: auto; }
   .pillars__grid { grid-template-columns: 1fr; }
   .pillars__grid .pillar--dark { grid-column: auto; grid-row: auto; }
   .pillar--dark .pillar__index { padding-bottom: 1.5rem; }

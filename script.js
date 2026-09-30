@@ -64,31 +64,6 @@
     if (d.open) modules.forEach((o) => { if (o !== d) o.open = false; });
   }));
 
-  /* ---------- Length-of-stay ladder ---------- */
-  const ladder = $('.ladder');
-  const bars = $$('.bar', ladder);
-  const label = $('[data-ladder-label]');
-  const value = $('[data-ladder-value]');
-
-  bars.forEach((bar) => bar.style.setProperty('--v', bar.dataset.value));
-
-  const select = (bar) => {
-    bars.forEach((b) => b.classList.toggle('is-active', b === bar));
-    bars.forEach((b) => b.setAttribute('aria-pressed', String(b === bar)));
-    label.textContent = bar.dataset.label;
-    value.textContent = bar.dataset.value;
-  };
-  bars.forEach((bar) => {
-    bar.addEventListener('click', () => select(bar));
-    bar.addEventListener('mouseenter', () => select(bar));
-    bar.addEventListener('focus', () => select(bar));
-  });
-  select($('.bar.is-active', ladder));
-
-  new IntersectionObserver(([entry], obs) => {
-    if (entry.isIntersecting) { ladder.classList.add('is-in'); obs.disconnect(); }
-  }, { threshold: 0.3 }).observe(ladder);
-
   /* ---------- Comparison tabs (mobile) ---------- */
   const table = $('[data-compare]');
   const tabs = $$('[data-compare-tabs] button');
